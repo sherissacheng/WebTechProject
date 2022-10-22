@@ -1,0 +1,56 @@
+body {
+    background-color: #13121e;
+  }
+  #home, #title {
+    display: block;
+    float: left;
+    padding: 8px;
+    font-family: Calibri;
+    font-size: 23px;
+    border-radius: 10px;
+    color: white;
+  }
+  #title-bottom{
+    color: #63abfb
+  }
+  #home-button {
+    height: 50px;
+  }
+  .nav-bar {
+    display: block;
+    float: right;
+    padding: 8px;
+    font-family: Calibri;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  .text {
+    color: white;
+    font-family: Calibri;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  #contacts:hover{
+    background-color: #7884C0;
+  }
+  #food-drink:hover {
+    background-color: #63abfb;
+  }
+  #movies-shows:hover {
+    background-color: #f4b3ba;
+  }
+  #games:hover {
+    background-color: #c7a5ea;
+  }
+  #music:hover {
+    background-color: #41985e;
+  }
+  #books:hover {
+    background-color: #dcb974;
+  }
+  .socials:hover {
+    background-color: #63abfb;
+  }

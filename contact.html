@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      form {
+        padding: 10px;
+        align-content: center;
+        width: 500px;
+        margin: auto;
+      }
+      fieldset {
+        border: 1px solid lightgray;
+        margin: 10px;
+      }
+      div,
+      legend {
+        color: white;
+        font-family: Calibri;
+        padding: 5px;
+      }
+      label {
+        width: 50px;
+        display: inline-block;
+      }
+      ul {
+        text-align: center;
+      }
+      .socials {
+        display: inline-block;
+        padding: 8px;
+        font-family: Calibri;
+        font-size: large;
+        border-radius: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li id="home">
+          <a href="index.html"
+            ><img
+              id="home-button"
+              src="images/Home_Button.jpg"
+              alt="Image of Me"
+              title="Image of Me"
+          /></a>
+        </li>
+        <li id="title">Sherissa's <br> Final Project</li>
+        <li id="contacts" class="nav-bar">
+          <a href="contact.html">Contact Me</a>
+        </li>
+        <li id="food-drink" class="nav-bar">
+          <a href="food-drink.html">Food & Drink</a>
+        </li>
+        <li id="movies-shows" class="nav-bar">
+          <a href="movies-shows.html">Movies & Shows</a>
+        </li>
+        <li id="games" class="nav-bar"><a href="games.html">Games</a></li>
+        <li id="music" class="nav-bar"><a href="music.html">Music</a></li>
+        <li id="books" class="nav-bar"><a href="books.html">Books</a></li>
+      </ul>
+    <div>
+      <form action="https://oim-apis.herokuapp.com/form" method="post">
+        <fieldset>
+          <legend class="font">Leave a comment!</legend>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your name here" id="name" />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Enter your email here" id="email" />
+          </div>
+          <div>
+            <label for="comments">Comments:</label>
+          </div>
+          <div>
+            <textarea id="comments" name="comments" rows="5" cols="25">
+            </textarea>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <ul>
+      <li class="socials">
+        <a href="https://www.linkedin.com/in/sherissacheng/">LinkedIn</a>
+      </li>
+      <li class="socials">
+        <a href="https://tinyurl.com/sherissacheng">My Portfolio</a>
+      </li>
+      <li class="socials">
+        <a href="https://github.com/sherissacheng/WebTech">Github</a>
+      </li>
+      <li class="socials"><a href="mailto: scheng1@babson.edu">Email</a></li>
+    </ul>
+  </body>
+</html>
