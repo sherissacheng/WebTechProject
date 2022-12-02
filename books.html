@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page touches on my favorite books and other books I have read">
-    <meta name="keywords" content="Sherissa Cheng, books, GoodReads, quotes">
-    <meta name="author" content="Sherissa Cheng">
+    <meta
+      name="description"
+      content="This page touches on my favorite books and other books I have read"
+    />
+    <meta name="keywords" content="Sherissa Cheng, books, GoodReads, quotes" />
+    <meta name="author" content="Sherissa Cheng" />
     <title>Books</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon" />
     <style>
-      #intro{
+      #intro {
         text-align: center;
-        width: 600px; 
+        width: 600px;
         margin-top: 20px;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -46,7 +49,7 @@
       .column-4 {
         width: 50%;
       }
-      #table-2{
+      #table-2 {
         margin-bottom: 100px;
       }
     </style>
@@ -71,13 +74,9 @@
         <li id="contacts" class="nav-bar">
           <a href="contact.html">Contact Me</a>
         </li>
-        <li id="food-drink" class="nav-bar">
-          <a href="food-drink.html">Food & Drink</a>
-        </li>
         <li id="movies-shows" class="nav-bar">
           <a href="movies-shows.html">Movies & Shows</a>
         </li>
-        <li id="games" class="nav-bar"><a href="games.html">Games</a></li>
         <li id="music" class="nav-bar"><a href="music.html">Music</a></li>
         <li id="books" class="nav-bar"><a href="books.html">Books</a></li>
       </ul>
@@ -93,6 +92,9 @@
       </p>
     </div>
     <div>
+      <button id="color-button">Randomize Title Color</button>
+    </div>
+    <div>
       <h1 class="text">All-Time Favorite Books</h1>
       <table class="text">
         <tr>
@@ -102,7 +104,7 @@
           <th class="column-4">GoodReads Link</th>
         </tr>
         <tr>
-          <td>Territory of Light</td>
+          <td class="title">Territory of Light</td>
           <td>Yuko Tsushima</td>
           <td>
             “While thinking how absurd it was to dream of her after all these
@@ -119,7 +121,7 @@
           </td>
         </tr>
         <tr>
-          <td>Kafka on the Shore</td>
+          <td class="title">Kafka on the Shore</td>
           <td>Haruki Murakami</td>
           <td>
             "Lost opportunities, lost possibilities, feelings we can never get
@@ -141,7 +143,7 @@
           </td>
         </tr>
         <tr>
-          <td>A Thousand Splendid Suns</td>
+          <td class="title">A Thousand Splendid Suns</td>
           <td>Khaled Hosseini</td>
           <td>
             “Mariam wished her mother were alive to see this. To see her, amid
@@ -160,7 +162,7 @@
           </td>
         </tr>
         <tr>
-          <td>The Percy Jackson Series</td>
+          <td class="title">The Percy Jackson Series</td>
           <td>Rick Riordan</td>
           <td>
             "If my life is going to mean anything, I have to live it myself."
@@ -174,7 +176,7 @@
           </td>
         </tr>
         <tr>
-          <td>The Harry Potter Series</td>
+          <td class="title">The Harry Potter Series</td>
           <td>J.K. Rowling</td>
           <td>
             "It takes a great deal of bravery to stand up to our enemies, but
@@ -194,7 +196,7 @@
     </div>
     <div>
       <h1 class="text">Other Books I've Read</h1>
-      <table id="table-2" class="text" >
+      <table id="table-2" class="text">
         <tr>
           <th class="column-1">Title</th>
           <th class="column-2">Author</th>
@@ -202,7 +204,7 @@
           <th class="column-4">GoodReads Link</th>
         </tr>
         <tr>
-          <td>Norwegian Wood</td>
+          <td class="title">Norwegian Wood</td>
           <td>Haruki Murakami</td>
           <td>
             "Despite your best efforts, people are going to be hurt when it’s
@@ -217,7 +219,7 @@
           </td>
         </tr>
         <tr>
-          <td>Almond: A Novel</td>
+          <td class="title">Almond: A Novel</td>
           <td>Won-Pyung Sohn</td>
           <td>
             "But books are quiet. They remain dead silent until somebody flips
@@ -235,7 +237,7 @@
           </td>
         </tr>
         <tr>
-          <td>All the Light We Cannot See</td>
+          <td class="title">All the Light We Cannot See</td>
           <td>Anthony Doerr</td>
           <td>
             "What the war did to dreamers." <br />
@@ -251,7 +253,7 @@
           </td>
         </tr>
         <tr>
-          <td>No Longer Human</td>
+          <td class="title">No Longer Human</td>
           <td>Osamu Dazai</td>
           <td>
             "To decide I’m hopeless before I even begin is nothing but
@@ -267,5 +269,21 @@
         </tr>
       </table>
     </div>
+    <script>
+      function randomColor() {
+        const titleEl = document.getElementsByClassName("title");
+        console.log(titleEl); 
+        let x = Math.floor(Math.random() * 256);
+        let y = Math.floor(Math.random() * 256);
+        let z = Math.floor(Math.random() * 256);
+        let textEl = "rgb(" + x + "," + y + "," + z + ")";
+
+        titleEl.style.color = "textEl";
+      }
+
+      document.getElementById("color-button").onclick = function () {
+        randomColor();
+      };
+    </script>
   </body>
 </html>

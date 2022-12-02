@@ -40,18 +40,14 @@
         <li id="contacts" class="nav-bar">
           <a href="contact.html">Contact Me</a>
         </li>
-        <li id="food-drink" class="nav-bar">
-          <a href="food-drink.html">Food & Drink</a>
-        </li>
         <li id="movies-shows" class="nav-bar">
           <a href="movies-shows.html">Movies & Shows</a>
         </li>
-        <li id="games" class="nav-bar"><a href="games.html">Games</a></li>
         <li id="music" class="nav-bar"><a href="music.html">Music</a></li>
         <li id="books" class="nav-bar"><a href="books.html">Books</a></li>
       </ul>
     </div>
-    <div class="text" class="centering">
+    <div id="intro-text" class="text" class="centering">
       <p>
         Hi there! Thanks for visiting my page. This website serves as my final
         project for OIM3690 - Web Technologies under Professor Zhi Li. It's been
@@ -69,9 +65,19 @@
       </p>
       <p>
         I've got a lot of interests as you'll find throughout this website, from
-        books and movies to food and drinks! Feel free to look around, and leave
+        books and music to movies and tv shows! Feel free to look around, and leave
         a comment with your thoughts!
       </p>
     </div>
+    <script>
+      function f(){
+        console.log("test"); 
+        // setTimeout(f,1000); 
+      }
+
+      document.getElementById("intro-text").onload = function (){
+        f(); 
+      }
+    </script>
   </body>
 </html>

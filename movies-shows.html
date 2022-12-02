@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page touches on my favorite movies and shows">
-    <meta name="keywords" content="Sherissa Cheng, movies, tv shows, anime">
-    <meta name="author" content="Sherissa Cheng">
+    <meta
+      name="description"
+      content="This page touches on my favorite movies and shows"
+    />
+    <meta name="keywords" content="Sherissa Cheng, movies, tv shows, anime" />
+    <meta name="author" content="Sherissa Cheng" />
     <title>Movies & Shows</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon" />
     <style>
       .align-left {
         float: left;
@@ -28,6 +31,19 @@
         width: 1000px;
         margin-left: auto;
         margin-right: auto;
+      }
+      #art-swap {
+        margin: 0;
+        position: absolute;
+        left: 43%;
+      }
+      #critic-reviews {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+      }
+      #spacing{
+        height: 20px; 
       }
     </style>
   </head>
@@ -51,29 +67,32 @@
         <li id="contacts" class="nav-bar">
           <a href="contact.html">Contact Me</a>
         </li>
-        <li id="food-drink" class="nav-bar">
-          <a href="food-drink.html">Food & Drink</a>
-        </li>
         <li id="movies-shows" class="nav-bar">
           <a href="movies-shows.html">Movies & Shows</a>
         </li>
-        <li id="games" class="nav-bar"><a href="games.html">Games</a></li>
         <li id="music" class="nav-bar"><a href="music.html">Music</a></li>
         <li id="books" class="nav-bar"><a href="books.html">Books</a></li>
       </ul>
+    </div>
+    <div>
+      <button id="art-swap">Swap Art</button>
+      <button id="critic-reviews">Critic Reviews</button>
+    </div>
+    <div id="spacing">
     </div>
     <div class="centering">
       <h1 class="text">Favorite Movies</h1>
       <div class="text">
         <div>
           <img
+            id="fallen-angels"
             class="align-left"
             src="images/fallen-angels-movie.jpg"
             alt="Fallen Angels movie cover"
             title="Fallen Angels Movie"
           />
           <h2>Fallen Angels <br />by Wong Kar-wai</h2>
-          <p>
+          <p id="fa-text">
             Fallen Angels is the second movie of Wong Kar-wai's I've watched and
             definitely sits near the top of my list of movies I've enjoyed. I
             particularly liked He Zhiwu: though mute, his actions are hilarious
@@ -86,13 +105,14 @@
         </div>
         <div class="align-right">
           <img
+            id="howls-moving"
             class="align-right"
             src="images/howls-moving-castle.webp"
             alt="Howl's Moving Castle movie cover"
             title="Howl's Moving Castle Movie"
           />
           <h2>Howl's Moving Castle <br />by Hayao Miyazaki</h2>
-          <p>
+          <p id="hmc-text">
             Howl's Moving Castle is the first and only Studio Ghibli movie I've
             seen so far (which is truly a crime, I definitely need to watch more
             of them!). I love Miyazaki's world-building: every character is so
@@ -103,13 +123,14 @@
         </div>
         <div>
           <img
+            id="dead-poets"
             class="align-left"
             src="images/dead-poets-society.jpg"
             alt="Dead Poets Society movie cover"
             title="Dead Poets Society Movie"
           />
           <h2>Dead Poets Society <br />by Peter Weir</h2>
-          <p>
+          <p id="dps-text">
             Dead Poets Society is a Dark Academia dream: the romanticisation of
             school, the secret meetings to shout poetry and inspire others with
             words, and the honors society. Like the name suggests, there is a
@@ -124,13 +145,14 @@
       <div class="text">
         <div>
           <img
+            id="merlin"
             class="align-left"
             src="images/merlin.jpg"
             alt="Merlin cover"
             title="Merlin TV Show"
           />
           <h2>Merlin <br />by Julie Gardner</h2>
-          <p>
+          <p id="merlin-text">
             For a TV show that was produced in 2008, I think the quality isn't
             too bad. I'm sure I would cringe looking back at it now, but for
             middle-school me this show was hilarious and magical. The fact that
@@ -140,13 +162,14 @@
         </div>
         <div class="align-right">
           <img
+            id="queens-gambit"
             class="align-right"
             src="images/quuens-gambit.jpg"
             alt="Queen's Gambit cover"
             title="Queen's Gambit TV Show"
           />
           <h2>Queen's Gambit <br />by Scott Frank</h2>
-          <p>
+          <p id="qg-text">
             As someone who was in the chess club in elementary school, and have
             since casually played, Queen's Gambit was very fun watch. I adore
             Beth's awkwardness around people and how it all disappears the
@@ -157,13 +180,14 @@
         </div>
         <div>
           <img
+            id="attack-on-titan"
             class="align-left"
             src="images/attack-on-titan.jpg"
             alt="Attack on Titan cover"
             title="Attack on Titan TV Show"
           />
           <h2>Attack on Titan <br />by Hajime Isayama</h2>
-          <p>
+          <p id="aot-text">
             I feel like Attack on Titan is a given for anyone who watches anime.
             The plot is so beautifully written and connected, and there were so
             many plot twists that I didn't expect at all in the moment, but
@@ -174,22 +198,83 @@
         </div>
         <div class="align-right">
           <img
+            id="haikyu"
             class="align-right"
             src="images/haikyu.jpg"
             alt="Haikyu!! cover"
             title="Haikyu!! TV Show"
           />
           <h2>Haikyu!! <br />by Haruichi Furadate</h2>
-          <p>
+          <p id="haikyu-text">
             Haikyu!! was the first ever anime I watched, so it definitely holds
             a special place in my heart. Hinata and Kageyama's dynamic is so
             fun, and while there are intense moments in the show, it feels
             lighthearted as whole. Whenever I feel nostalgic, I pull up Haikyu!!
-            My favorite character is Akaashi, he's such a calm character and he 
+            My favorite character is Akaashi, he's such a calm character and he
             balances out Bokuto's energy.
           </p>
         </div>
       </div>
     </div>
+    <script>
+      const art = new Array();
+      art[0] = "images/fallen-angels-swap.jpg";
+      art[1] = "images/Howls-moving-castle-swap.jpg";
+      art[2] = "images/dead-poets-society-swap.jpg";
+      art[3] = "images/merlin-swap.jpg";
+      art[4] = "images/queens-gambit-swap.jpg";
+      art[5] = "images/attack-on-titan-swap.jpg";
+      art[6] = "images/haikyu-swap.jpg";
+
+      function artSwap() {
+        const faMovie = document.getElementById("fallen-angels");
+        const hmcMovie = document.getElementById("howls-moving");
+        const dpsMovie = document.getElementById("dead-poets");
+        const merlinTV = document.getElementById("merlin");
+        const qgTV = document.getElementById("queens-gambit");
+        const aotTV = document.getElementById("attack-on-titan");
+        const haikyuTV = document.getElementById("haikyu");
+
+        faMovie.src = art[0];
+        hmcMovie.src = art[1];
+        dpsMovie.src = art[2];
+        merlinTV.src = art[3];
+        qgTV.src = art[4];
+        aotTV.src = art[5];
+        haikyuTV.src = art[6];
+      }
+
+      function criticReviews() {
+        const faText = document.getElementById("fa-text");
+        const hmcText = document.getElementById("hmc-text");
+        const dpsText = document.getElementById("dps-text");
+        const merlinText = document.getElementById("merlin-text");
+        const qgText = document.getElementById("qg-text");
+        const aotText = document.getElementById("aot-text");
+        const haikyuText = document.getElementById("haikyu-text");
+
+        faText.innerText =
+          "Amazing direction by Wong Kar-wai and a film flooding to the brim with emotional pull and humanity, Fallen Angels is another great film in his repertoire. Shot with many effects and filming styles, the film literally portrays a moving city and those in it in such a surreal and exciting way. With the many references to Wong Kar-wai's Chungking Express(1994), this makes a wonderful companion piece to that particular film but thoroughly remains its own distinctively original story arc and characters. If you haven't checked out Wong Kar-wai yet or any of his films, Fallen Angels, Chungking Express (1994), In the Mood for Love (2000), or Happy Together(1997) are all released on Blu-ray, and you should rent or watch one to get a taste of his visual style. The first three have excellent Criterion Collection releases and Kino gives a solid job with Happy Together so if you like one you will likely find the others very intriguing and unique works as well!";
+        hmcText.innerText =
+          "Miyazaki emphasizes different narrative elements than most fantasy films of this kind (hence why the 'missing prince' plot twist is treated like an afterthought) but this isn't a cheap attempt to subvert expectations rather he's focusing on character growth at the expense of silly plot mechanics which makes his anti war plea more effective.";
+        dpsText.innerText =
+          "He's (Professor Robert Keating) one of the few who sees the potential in them and encourages them to embrace life. 'Carpe Diem. Seize the day boys, make your lives extraordinary.'' These are the words that encapsulate this inspirational story about having a passion for and 'sucking the marrow out of...'' life. Professor Keating teaches in a very different and personal manner, quoting from such poets as Walt Whitman, Byron, Henry Thoreau and Robert Frost. He has a passion for what he teaches and shows a determination to instil that in his pupils.";
+        merlinText.innerText =
+          "Cheesy, but it held my attention. I liked the main character especially. The special effects were a bit lame. But, Merlin, Gaius and Morgana made up for it. I continued to think to myself that the show is silly; a bit stupid. But, there I was watching it again. It really does hold the attention somehow. It's cute and kids seem to like it too. It might be a little violent for some children. But, they never show any gore in too much detail. I felt like it would be a show that children would enjoy while their parents could watch also without being utterly bored. I wanted a little more at the end. The servitude to lame a** Arthur by Merlin was tiresome. This show was nothing amazing but, as I said, peculiarly capturing my attention. Now, that being said, I especially liked the very end.";
+        qgText.innerText =
+          "I would like to highlight that the plot is absolutely addictive, maybe due to the great directors it had. Although the series had some moments the plot was relatively simple, I extremely love the end (in spite of the fact it was reasonably easy to predict it). And the actors were also exceptionally talented. I highly recommended this series, and I really considerer the people who have already watched it extremely lucky.";
+        aotText.innerText =
+          "Excellent continuation of the story. Really enjoyed the character development and story line. Tying up multiple narratives. The really fascinating part is the self hate experienced by Eldians due their heritage. The way Marlians exploit that self hate and use it to further their own political and military narrative. Eldian never ending self resentment is so similar to self resentment many young people feel today in the western world…. Fascinating series. Brutal at times, but quite engaging.";
+        haikyuText.innerText =
+          "A great introduction to a wholesome cast of characters. Despite not being a volleyball fan this is without a doubt my favorite anime... which surprises me as much as the next person. Please try a season of Haikyu, you will not regret it.";
+      }
+
+      document.getElementById("art-swap").onclick = function () {
+        artSwap();
+      };
+      document.getElementById("critic-reviews").onclick = function () {
+        criticReviews();
+      };
+    </script>
   </body>
 </html>
