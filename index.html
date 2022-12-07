@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This is the front page of my website">
-    <meta name="keywords" content="Sherissa Cheng, books, music, movies, shows, food, drink, games">
-    <meta name="author" content="Sherissa Cheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="This is the front page of my website" />
+    <meta
+      name="keywords"
+      content="Sherissa Cheng, books, music, movies, shows, food, drink, games"
+    />
+    <meta name="author" content="Sherissa Cheng" />
     <title>Index</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon" />
@@ -17,6 +20,12 @@
         margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
+      }
+      #thanks-swap{
+        color: #63abfb;
+        font-family: Calibri;
+        text-align: center;
+        margin-top: 50px;
       }
     </style>
   </head>
@@ -65,19 +74,45 @@
       </p>
       <p>
         I've got a lot of interests as you'll find throughout this website, from
-        books and music to movies and tv shows! Feel free to look around, and leave
-        a comment with your thoughts!
+        books and music to movies and tv shows! Feel free to look around, and
+        leave a comment with your thoughts!
       </p>
     </div>
+    <h2 id="thanks-swap">?</h2>
     <script>
-      function f(){
-        console.log("test"); 
-        // setTimeout(f,1000); 
+      const thanks = [
+      "Thank you for visiting",
+      "Gracias por su visita",
+      "Dziękujemy za wizytę",
+      "謝謝你的拜訪",
+      "お越し頂きありがとうございます",
+      "Merci pour votre visite",
+      "Tak for besøget",
+      "찾아 주셔서 감사합니다",
+      ];
+
+      function animation(i) {
+        if (i >= thanks.length) {
+          i = 0;
+        }
+
+        const thanksEl = document.getElementById("thanks-swap");
+
+        thanksEl.innerHTML = thanks[i];
+        // thanksEl.style.color = "white"; 
+        // thanksEl.style.fontFamily = "Calibri"; 
+
+        setTimeout(function () {
+          animation(i + 1);
+        }, 1500);
       }
 
-      document.getElementById("intro-text").onload = function (){
-        f(); 
+      animation(0);
+
+      document.querySelector("body").onload = function (){
+        animation(i);
       }
+
     </script>
   </body>
 </html>

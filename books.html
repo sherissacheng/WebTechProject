@@ -52,6 +52,14 @@
       #table-2 {
         margin-bottom: 100px;
       }
+      #color-button{
+        margin: 0;
+        position: absolute;
+        left: 45%;
+      }
+      #space{
+        height: 25px; 
+      }
     </style>
   </head>
   <body>
@@ -94,6 +102,7 @@
     <div>
       <button id="color-button">Randomize Title Color</button>
     </div>
+    <div id="space"></div>
     <div>
       <h1 class="text">All-Time Favorite Books</h1>
       <table class="text">
@@ -104,7 +113,7 @@
           <th class="column-4">GoodReads Link</th>
         </tr>
         <tr>
-          <td class="title">Territory of Light</td>
+          <td id="tol" class="title">Territory of Light</td>
           <td>Yuko Tsushima</td>
           <td>
             “While thinking how absurd it was to dream of her after all these
@@ -121,7 +130,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">Kafka on the Shore</td>
+          <td id="kots" class="title">Kafka on the Shore</td>
           <td>Haruki Murakami</td>
           <td>
             "Lost opportunities, lost possibilities, feelings we can never get
@@ -143,7 +152,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">A Thousand Splendid Suns</td>
+          <td id="atss" class="title">A Thousand Splendid Suns</td>
           <td>Khaled Hosseini</td>
           <td>
             “Mariam wished her mother were alive to see this. To see her, amid
@@ -162,7 +171,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">The Percy Jackson Series</td>
+          <td id="pj" class="title">The Percy Jackson Series</td>
           <td>Rick Riordan</td>
           <td>
             "If my life is going to mean anything, I have to live it myself."
@@ -176,7 +185,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">The Harry Potter Series</td>
+          <td id="hp" class="title">The Harry Potter Series</td>
           <td>J.K. Rowling</td>
           <td>
             "It takes a great deal of bravery to stand up to our enemies, but
@@ -204,7 +213,7 @@
           <th class="column-4">GoodReads Link</th>
         </tr>
         <tr>
-          <td class="title">Norwegian Wood</td>
+          <td id="nw" class="title">Norwegian Wood</td>
           <td>Haruki Murakami</td>
           <td>
             "Despite your best efforts, people are going to be hurt when it’s
@@ -219,7 +228,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">Almond: A Novel</td>
+          <td id="aan" class="title">Almond: A Novel</td>
           <td>Won-Pyung Sohn</td>
           <td>
             "But books are quiet. They remain dead silent until somebody flips
@@ -237,7 +246,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">All the Light We Cannot See</td>
+          <td id="atlwcs" class="title">All the Light We Cannot See</td>
           <td>Anthony Doerr</td>
           <td>
             "What the war did to dreamers." <br />
@@ -253,7 +262,7 @@
           </td>
         </tr>
         <tr>
-          <td class="title">No Longer Human</td>
+          <td id="nlh" class="title">No Longer Human</td>
           <td>Osamu Dazai</td>
           <td>
             "To decide I’m hopeless before I even begin is nothing but
@@ -272,14 +281,17 @@
     <script>
       function randomColor() {
         const titleEl = document.getElementsByClassName("title");
-        console.log(titleEl); 
-        let x = Math.floor(Math.random() * 256);
-        let y = Math.floor(Math.random() * 256);
-        let z = Math.floor(Math.random() * 256);
-        let textEl = "rgb(" + x + "," + y + "," + z + ")";
 
-        titleEl.style.color = "textEl";
+        for (const element of titleEl) {
+          let x = Math.floor(Math.random() * 256);
+          let y = Math.floor(Math.random() * 256);
+          let z = Math.floor(Math.random() * 256);
+          let textEl = "rgb(" + x + "," + y + "," + z + ")";
+          element.style.color = textEl;
+        }
+       
       }
+      
 
       document.getElementById("color-button").onclick = function () {
         randomColor();

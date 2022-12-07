@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page includes my contacts and a way to reach me">
-    <meta name="keywords" content="Sherissa Cheng, contact, LinkedIn, portfolio, Github, email">
-    <meta name="author" content="Sherissa Cheng">
+    <meta
+      name="description"
+      content="This page includes my contacts and a way to reach me"
+    />
+    <meta
+      name="keywords"
+      content="Sherissa Cheng, contact, LinkedIn, portfolio, Github, email"
+    />
+    <meta name="author" content="Sherissa Cheng" />
     <title>Contact Me</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon" />
     <style>
       form {
         padding: 10px;
@@ -72,7 +78,11 @@
       </ul>
     </div>
     <div>
-      <form action="https://oim-apis.herokuapp.com/form" method="post">
+      <form
+        id="cform"
+        action=""
+        method="post"
+      >
         <fieldset>
           <legend class="font">Leave a comment!</legend>
           <div>
@@ -89,6 +99,9 @@
           <div>
             <textarea id="comments" name="comments" rows="5" cols="25">
             </textarea>
+          </div>
+          <div>
+            <input type="submit" value="Submit" />
           </div>
         </fieldset>
       </form>
@@ -107,5 +120,21 @@
         <li class="socials"><a href="mailto: scheng1@babson.edu">Email</a></li>
       </ul>
     </div>
+    <script>
+      function validateForm(form) {
+        console.log("testing validateForm");
+        let element = cform.name.value; 
+
+        if (element == 0||1||2||3||4||5||6||7||8||9){
+          console.log("ahahahaha")
+          alert("Please only enter letters for your name!"); 
+        }
+       
+      }
+
+      document.getElementById("cform").oninput = function () {
+        validateForm();
+      };
+    </script>
   </body>
 </html>
